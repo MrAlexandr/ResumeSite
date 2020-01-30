@@ -1,0 +1,60 @@
+﻿<link href="~/Content/StyleSkills.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Skills";
+}
+
+<div class="contentSkills">
+    <h2 class="title1">@ViewBag.Title</h2>
+    <br />
+
+    <input id="tab1" type="radio" name="tabs" checked>
+    <label for="tab1">ООП & C#</label>
+
+    <input id="tab2" type="radio" name="tabs">
+    <label for="tab2">ASP.NET MVC</label>
+
+    <input id="tab3" type="radio" name="tabs">
+    <label for="tab3">Entity Framework</label>
+
+    <input id="tab4" type="radio" name="tabs">
+    <label for="tab4">SQL & Linq</label>
+
+    <section id="content1">
+        <p>
+            @ViewBag.Text1
+        </p>
+    </section>
+
+    <section id="content2">
+        <p>
+            @ViewBag.Text2
+        </p>
+        
+    </section>
+
+    <section id="content3">
+        <p>
+            @ViewBag.Text3
+            <ul class="ul1 uls">
+                <li class="ul1_li lis">DataBase First;</li>
+                <li class="ul1_li lis">Model First;</li>
+                <li class="ul1_li lis">CodeFirst.</li>
+            </ul>
+        </p>        
+    </section>
+
+    <section id="content4">
+        <p>
+            @ViewBag.Text4
+            <ul class="ul2 uls">
+                <li class="ul2_li lis">SELECT;</li>
+                <li class="ul2_li lis">UPDATE;</li>
+                <li class="ul2_li lis">INSERT;</li>
+                <li class="ul2_li lis">DELETE.</li>
+            </ul>
+        </p>
+    </section>
+
+
+</div>

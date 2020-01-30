@@ -1,0 +1,45 @@
+﻿<link href="~/Content/StyleAbout.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "About Me";
+    DateTime myDate = new DateTime(1995, 01, 28);
+}
+
+<div class="contentAbout">
+
+    <h2 class="title1">@ViewBag.Title</h2>
+    <br />
+
+    <h4 class="title2">@ViewBag.Title1</h4>
+    <br />
+
+    <div class="top">
+        <div class="photoDiv">
+            <img src="~/Images/Photo.jpeg" width="250" height="330" />
+        </div>
+        <div class="tableDiv">
+            <table class="tableData">
+                <tr><td width="60"><img src="~/Icons/calendar.ico" /></td><td><span class="tableSpan">@myDate.ToString("dd/MM/yyyy")</span></td></tr>
+                <tr><td width="60"><img src="~/Icons/location.ico" /></td><td><span class="tableSpan">г. Казань</span></td></tr>
+                <tr><td width="60"><img src="~/Icons/person.ico" /></td><td><span class="tableSpan">Не женат</span></td></tr>
+                <tr><td width="60"><img src="~/Icons/checkmark.ico" /></td><td><span class="tableSpan">Наличие военного билета</span></td></tr>
+            </table>
+        </div>
+    </div>
+
+    <br />
+    <h4 class="stopfloat title3">@ViewBag.Title2</h4>
+    <br />
+
+    <div class="midlle">
+        @ViewBag.Text1
+    </div>
+    <br />
+
+    <div class="buttom">
+        <h4 class="title4">@ViewBag.Title3</h4>
+        <br />
+        @ViewBag.Text2
+    </div>
+
+</div>

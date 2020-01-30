@@ -1,0 +1,73 @@
+﻿.contentSkills {
+    margin: 0px auto;
+    /*padding: 0px;*/
+    width: 902px;
+}
+
+section {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    color: #3b3c3d;
+    display: none;
+    /*padding: 20px 0 0;*/
+    border-top: 2px solid #3b3c3d;
+}
+
+input {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    margin: 0 0 -2px;
+    padding-top: 15px;
+    padding-bottom: 15px;  
+    width: 220px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    text-transform:uppercase;
+    font-weight: 600;
+    text-align: center;
+    color: #44b39d;
+    border: 1px solid transparent;
+
+}
+
+    label:before {
+        font-family: fontawesome;
+        font-weight: normal;
+        margin-right: 10px;
+    }
+
+    label:hover {
+        color: #3b3c3d;
+        cursor: pointer;
+    }
+
+input:checked + label {
+    color: #fcfcfc;
+    border-top: 2px solid #3b3c3d;
+    border-left: 2px solid #3b3c3d;
+    border-right: 2px solid #3b3c3d;
+    background-color: #e6567a;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+    display: block;
+}
+
+
+.title1 {
+    color: #bf4a67;
+}
+
+.lis {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    font-family: Arial,sans-serif;
+}

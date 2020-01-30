@@ -1,0 +1,34 @@
+﻿.contentSite {
+    margin: 0px auto;
+    /*padding: 0px;*/
+    width: 902px;
+}
+
+.text {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    color: #3b3c3d;
+}
+
+.ul1_li {
+    font-family: Arial,sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.a_github{
+    font-family: Arial, sans-serif;
+    /*display:block;*/
+    text-decoration: none;
+    color: #bf4a67;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.a_github:hover{
+    color: #3b3c3d;
+    /*text-shadow: 0 0 2px #000;*/
+}

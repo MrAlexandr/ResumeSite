@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "ResumeSite of Alexandr Antonov";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/StyleLayout.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/StyleShared.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Cache-Control" content="no-cache"> @*Запрет кешированияяяя!*@
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="nameSite">
+            <h1>ALEXANDR ANTONOV</h1>
+            <span class="nameSite_span1">Resume</span> <span class="nameSite_span2">WEBSITE</span>
+        </div>
+
+        <div class="contacts">
+            <table class="contacts_table">
+                <tr class="contacts_tr1"><td class="contacts_td_img"><img src="~/Icons/phone.ico" /></td><td class="contacts_td_text" valign="middle"><span class="contacts_span1" href="#">&nbsp;&nbsp;+7 (987) 285-94-63</span></td></tr>
+                <tr class="contacts_tr2"><td class="contacts_td_img"><img src="~/Icons/email.ico" /></td><td class="contacts_td_text" valign="middle"><span class="contacts_span2">&nbsp;&nbsp;Alex28.01.95@yandex.ru</span></td></tr>
+                <tr class="contacts_tr3"><td class="contacts_td_img"><img src="~/Icons/github.ico" /></td><td class="contacts_td_text" valign="middle"><a class="contacts_a" target="_blank" href="https://github.com/MrAlexandr">&nbsp;&nbsp;gitgub.com/mrAlexandr&nbsp;&nbsp;</a></td></tr>
+            </table>
+        </div>
+    
+
+    </div>
+
+
+
+
+    <div class="main">
+        <nav class="navMain">
+            <ul class="ulMain">
+                <li><a class="buttonMenuOne" href="/Home/About">About Me</a></li>
+                <li><a class="buttonMenuTwo" href="/Home/Skills">SKILLS</a></li>
+                <li><a class="buttonMenuThree" href="/Home/Website">WebSite</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="contentBlock">
+
+            @RenderBody()
+
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <p class="footerCopy">&copy; ALEXANDR ANTONOV, Resume Site, @DateTime.Now.Year</p>
+        <ul class="footerLinks_ul">
+            <li class="footerLinks_li"><a class="footerLinks_a" href="https://vk.com/cah4e3_95" target="_blank"><img class="footerLinks_a_img" src="~/Icons/vk.ico" /></a></li>
+            <li class="footerLinks_li"><a class="footerLinks_a" href="https://t.me/AlexandrAntonov" target="_blank"><img class="footerLinks_a_img" src="~/Icons/telegram.ico" /></a></li>
+            <li class="footerLinks_li"><a class="footerLinks_a" href="https://github.com/mralexandr" target="_blank"><img class="footerLinks_a_img" src="~/Icons/github.ico" /></a></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

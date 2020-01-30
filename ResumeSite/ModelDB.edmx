@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModelDB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelDBStoreContainer">
+    <EntitySet Name="TextsSet" EntityType="ModelDB.Store.TextsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CategoriesSet" EntityType="ModelDB.Store.CategoriesSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CategoriesTexts" Association="ModelDB.Store.CategoriesTexts">
+      <End Role="Categories" EntitySet="CategoriesSet" />
+      <End Role="Texts" EntitySet="TextsSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TextsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CategoriesId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CategoriesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="CategoriesTexts">
+    <End Role="Categories" Type="ModelDB.Store.CategoriesSet" Multiplicity="1" />
+    <End Role="Texts" Type="ModelDB.Store.TextsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Texts">
+        <PropertyRef Name="CategoriesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ModelDBContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TextsSet" EntityType="ModelDB.Texts" />
+          <EntitySet Name="CategoriesSet" EntityType="ModelDB.Categories" />
+          <AssociationSet Name="CategoriesTexts" Association="ModelDB.CategoriesTexts">
+            <End Role="Categories" EntitySet="CategoriesSet" />
+            <End Role="Texts" EntitySet="TextsSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Texts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Content" Type="String" Nullable="false" />
+          <NavigationProperty Name="Categories" Relationship="ModelDB.CategoriesTexts" FromRole="Texts" ToRole="Categories" />
+          <Property Name="CategoriesId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Category" Type="String" Nullable="false" />
+          <NavigationProperty Name="Texts" Relationship="ModelDB.CategoriesTexts" FromRole="Categories" ToRole="Texts" />
+        </EntityType>
+        <Association Name="CategoriesTexts">
+          <End Type="ModelDB.Categories" Role="Categories" Multiplicity="1" />
+          <End Type="ModelDB.Texts" Role="Texts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Texts">
+              <PropertyRef Name="CategoriesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelDBStoreContainer" CdmEntityContainer="ModelDBContainer">
+    <EntitySetMapping Name="TextsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDB.Texts)">
+        <MappingFragment StoreEntitySet="TextsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CategoriesId" ColumnName="CategoriesId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoriesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDB.Categories)">
+        <MappingFragment StoreEntitySet="CategoriesSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
