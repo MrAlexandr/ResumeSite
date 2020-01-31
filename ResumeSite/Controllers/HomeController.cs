@@ -27,7 +27,7 @@ namespace ResumeSite.Controllers
                 ViewBag.Text2 = text2.Content;
             }
 
-                return View();
+            return View();
         }
 
         public ActionResult Skills()
@@ -40,7 +40,7 @@ namespace ResumeSite.Controllers
                 ViewBag.Text4 = context.TextsSet.Find(7).Content;
             }
 
-                return View();
+            return View();
         }
 
         public ActionResult Website()
@@ -54,7 +54,12 @@ namespace ResumeSite.Controllers
                 ViewBag.Text23 = context.TextsSet.Find(12).Content;
                 ViewBag.Text24 = context.TextsSet.Find(13).Content;
             }
-                return View();
+            return View();
+        }
+
+        public ActionResult Startpage()
+        {
+            return View();
         }
     }
 }

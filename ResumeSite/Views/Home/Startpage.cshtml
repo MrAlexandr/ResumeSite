@@ -1,7 +1,56 @@
-﻿
+﻿<link href="~/Content/StyleStart.css" rel="stylesheet" type="text/css" />
+
 @{
-    ViewBag.Title = "Startpage";
+    ViewBag.Title = "Alexandr Antonov";
+    Layout = null;
 }
 
-<h2>Startpage</h2>
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="UTF-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/StyleStart.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/StyleShared.css" rel="stylesheet" type="text/css" />
+    @*<meta http-equiv="Cache-Control" content="no-cache"> @*Запрет кешированияяяя!*@
+</head>
+
+<body>
+    <div class="all">
+
+        <div class="top">
+            <div>
+                @*<h2 class="title1">WELCOME</h2>
+                    <h3 class="title2">TO THE</h3>*@
+                <h2 class="title3">RESUME WEBSITE</h2>
+                <h3 class="title4">OF</h3>
+            </div>
+
+            <div class="nameSite">
+                <h1 class="title5">ALEXANDR ANTONOV</h1>
+            </div>
+        </div>
+
+        <div class="main">
+            <nav class="navMain">
+                <ul class="ulMain">
+                    <li><a class="buttonMenuOne" href="/Home/About">About Me</a></li>
+                    <li><a class="buttonMenuTwo" href="/Home/Skills">SKILLS</a></li>
+                    <li><a class="buttonMenuThree" href="/Home/Website">WebSite</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer">
+            <ul class="footerLinks_ul">
+                <li class="footerLinks_li"><a class="footerLinks_a" href="https://github.com/mralexandr" target="_blank"><img class="footerLinks_a_img" src="~/Icons/github.ico" /></a></li>
+                <li class="footerLinks_li"><a class="footerLinks_a" href="https://t.me/AlexandrAntonov" target="_blank"><img class="footerLinks_a_img" src="~/Icons/telegram.ico" /></a></li>
+                <li class="footerLinks_li"><a class="footerLinks_a" href="https://vk.com/cah4e3_95" target="_blank"><img class="footerLinks_a_img" src="~/Icons/vk.ico" /></a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

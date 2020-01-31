@@ -168,17 +168,6 @@
     margin: 0;
 }
 
-/*.butMenu {
-    display: block;
-    text-align: center;
-    width: 240px;
-    line-height: 100px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: #00ffff;
-    position: relative;
-}*/
 
 .buttonMenuOne,
 .buttonMenuTwo,
@@ -197,8 +186,6 @@
     font-weight: 600;
     color: rgba(59, 60, 61, 0.7);
     overflow: hidden;
-    /*color: rgba(71, 201, 175, 0.5);*/
-    /*color: #3b3c3d;*/
 }
 
     .buttonMenuOne:hover,

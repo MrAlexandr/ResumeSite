@@ -161,6 +161,7 @@
     <Content Include="Content\StyleShared.css" />
     <Content Include="Content\StyleSite.css" />
     <Content Include="Content\StyleSkills.css" />
+    <Content Include="Content\StyleStart.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Icons\calendar.ico" />
@@ -214,7 +215,7 @@
     <Content Include="Views\Home\Startpage.cshtml" />
     <Content Include="Views\Home\Skills.cshtml" />
     <Content Include="Views\Home\Website.cshtml" />
-    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\alexandrantonov.somee.com.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
