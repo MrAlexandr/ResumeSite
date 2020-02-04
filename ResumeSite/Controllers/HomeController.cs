@@ -38,6 +38,7 @@ namespace ResumeSite.Controllers
                 ViewBag.Text2 = context.TextsSet.Find(6).Content;
                 ViewBag.Text3 = context.TextsSet.Find(14).Content;
                 ViewBag.Text4 = context.TextsSet.Find(7).Content;
+                ViewBag.Text5 = context.TextsSet.Find(15).Content;
             }
 
             return View();

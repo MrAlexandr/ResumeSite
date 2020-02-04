@@ -1,7 +1,7 @@
 ﻿.contentSkills {
     margin: 0px auto;
     /*padding: 0px;*/
-    width: 902px;
+    width: 676px;
 }
 
 section {
@@ -55,8 +55,7 @@ input:checked + label {
 
 #tab1:checked ~ #content1,
 #tab2:checked ~ #content2,
-#tab3:checked ~ #content3,
-#tab4:checked ~ #content4 {
+#tab3:checked ~ #content3 {
     display: block;
 }
 

@@ -10,31 +10,27 @@
     <br />
 
     <input id="tab1" type="radio" name="tabs" checked>
-    <label for="tab1">ООП & C#</label>
+    <label for="tab1">C# & ASP.NET</label>
 
     <input id="tab2" type="radio" name="tabs">
-    <label for="tab2">ASP.NET MVC</label>
+    <label for="tab2">Entity Framework</label>
 
     <input id="tab3" type="radio" name="tabs">
-    <label for="tab3">Entity Framework</label>
-
-    <input id="tab4" type="radio" name="tabs">
-    <label for="tab4">SQL & Linq</label>
+    <label for="tab3">SQL</label>
 
     <section id="content1">
         <p>
             @ViewBag.Text1
         </p>
-    </section>
-
-    <section id="content2">
+        <p>
+            @ViewBag.Text5
+        </p>
         <p>
             @ViewBag.Text2
         </p>
-        
     </section>
 
-    <section id="content3">
+    <section id="content2">
         <p>
             @ViewBag.Text3
             <ul class="ul1 uls">
@@ -45,7 +41,7 @@
         </p>        
     </section>
 
-    <section id="content4">
+    <section id="content3">
         <p>
             @ViewBag.Text4
             <ul class="ul2 uls">

@@ -4,6 +4,10 @@
     width: 902px;
 }
 
+.title1{
+    color: #44b39d;
+}
+
 .text {
     font-family: Arial, sans-serif;
     font-size: 18px;
@@ -13,9 +17,10 @@
 
 .ul1_li {
     font-family: Arial,sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 30px;
+    color: #3b3c3d;
 }
 
 .a_github{
